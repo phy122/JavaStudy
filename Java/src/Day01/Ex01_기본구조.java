@@ -1,6 +1,6 @@
 package Day01;
 
-//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
+//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
 //클래스
 //public class 클래스명
 //클래스명 = 파일명 (이름이 같아야한다.)
