@@ -53,12 +53,10 @@ public class BoardAccess implements BoardInterface	{
 	
 	@Override
 	public Board read(int no) {
-		int boardNo = 0;
-		if(boardNo != no) {
+		if(no < 0 || no >= count) {
 			return null;
 		}
-		else
-			return boardList[no];
+		return boardList[no];
 	}
 	
 	/***
@@ -73,19 +71,13 @@ public class BoardAccess implements BoardInterface	{
 	
 	@Override
 	public int update(Board board) {
-		int boardNo = count;
-		board.setNo(count);
-		if(boardNo != count) {
+		int no = board.getNo();
+		if(no < 0 || no >= count) {
 			return 0;
 		}
-		else {
-			board.setNo(boardNo);
-			String redDate = "2024/08/19 - 18:02";
-			String updDate = "2024/08/19 - 18:02";
-			board.setRegDate(redDate);
-			board.setUpdDate(updDate);
-			return 1;
-		}
+		boardList[no] = board;
+		String redDate = "2024/08/19 - 18:02";
+		return 1;
 			
 			
 	}
@@ -102,16 +94,16 @@ public class BoardAccess implements BoardInterface	{
 	
 	@Override
 	public int delete(int no) {
-		int boardNo = 0;
-		if(boardNo != no) {
+		if(no < 0 || no >= count) {
 			return 0;
 		}
-		else {
-			boardList[no] = null;
-			boardNo--;
-			count--;
-			return 1;
+		for (int i = no; i < count - 1; i++) {
+			boardList[i] = boardList[i + 1];
+			
 		}
+		boardList[no] = null;
+		count--;
+		return 1;
 	}
 
 }
