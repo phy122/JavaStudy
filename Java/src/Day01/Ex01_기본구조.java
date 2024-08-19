@@ -1,5 +1,5 @@
 package Day01;
-
+//sss
 //클래스
 //public class 클래스명
 //클래스명 = 파일명 (이름이 같아야한다.)
