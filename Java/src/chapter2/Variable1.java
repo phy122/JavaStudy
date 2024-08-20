@@ -6,7 +6,6 @@ public class Variable1 {
 		int level;
 		level = 10;
 		System.out.println(level);
-		// TODO Auto-generated method stub
 
 	}
 
