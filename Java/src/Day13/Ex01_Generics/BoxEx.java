@@ -35,6 +35,7 @@ public class BoxEx {
 			System.out.print(i + " ");
 		}
 		System.out.println();
+	
 	}
 
 }
