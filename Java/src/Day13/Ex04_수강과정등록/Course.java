@@ -37,10 +37,6 @@ public class Course <T> implements Manager {
 	public void setStudents(List<T> students) {
 		this.students = students;
 	}
-	@Override
-	public String toString() {
-		return "Course [name=" + name + ", students=" + students + "]";
-	}
 
 	@Override
 	public Course<?> createCourse(String name, Course<Person> course) {
@@ -73,6 +69,20 @@ public class Course <T> implements Manager {
 		}
 		System.out.println();
 	}
+	
+	/***
+	 * 수강생 추가
+	 */
+	public void addStudent(T t) {
+		getStudents().add(t);
+	}
+	
+	@Override
+	public String toString() {
+		return "Course [name=" + name + ", students=" + students + "]";
+	}
+
+	
 	
 	
 }
