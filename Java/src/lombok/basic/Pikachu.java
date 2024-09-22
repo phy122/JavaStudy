@@ -1,10 +1,10 @@
 package lombok.basic;
 
-import lombok.Builder;
-import lombok.Data;
+// import lombok.Builder;
+// import lombok.Data;
 
-@Data
-@Builder
+// @Data
+// @Builder
 public class Pikachu {
 	
 	int energy;
