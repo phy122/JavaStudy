@@ -31,5 +31,5 @@ public class Book {
     public void showBookInfo(){
         System.out.println(bookName + "," + author);
     } // 책 정보를 출력해 주는 메소드
-    
+    //testestsetestsetes
 }
